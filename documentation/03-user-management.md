@@ -13,13 +13,14 @@ I created organizational units to keep the domain organized.
 ## Test User Accounts
 
 Created three test accounts in Active Directory to practice user administration.
+[They can be found here](../screenshots/users-created.png)
 The accounts can be used to practice account maintenance and password resets.
 
 - Alex Morgan
 - Sarah Chen
 - David Wilson
 
-- [View user accounts made](../screenshots/users-created.png)
+[View user accounts made](../screenshots/users-created.png)
 
 
 ## Notes
