@@ -1,26 +1,28 @@
-# Domain Controller Setup
+# Active Directory User Management
 
 ## Overview
-I set up a Windows Server 2025 VM to practice Active Directory administration for a small company network.
+This part of the lab covers creating and organizing user accounts in Active Directory.
 
-## Setup
-- Server name: DT-DC01
-- OS: Windows Server 2025 Evaluation
-- Virtualization: QEMU/KVM on Ubuntu
-- Domain: dentech.local
-- Network: Default NAT
+## Organizational Units
+I created organizational units to keep the domain organized.
 
-## Configuration
-I installed Active Directory Domain Services and configured the server as the first domain controller in a new forest.
+- Employees
+- Computers
+- Security Groups
 
-DNS is being used to help domain-joined computers find the domain controller and other domain services.
+## Test User
+I created a test user account to practice basic user administration.
 
-## Testing
-- [ ] Confirm the server name
-- [ ] Verify the domain was created
-- [ ] Check that Active Directory Users and Computers opens
-- [ ] Verify the DNS service is running
-- [ ] Test a domain login from the Windows 11 VM
+- Name: Alex Morgan
+- Username: amorgan
+- Location: Employees OU
+
+## Tasks
+- [x] Create organizational units
+- [x] Create a test user
+- [ ] Review user account properties
+- [ ] Practice resetting a user's password
+- [ ] Test account login
 
 ## Notes
-I'll add any issues I run into and how I fixed them as I continue building the lab.
+Having trouble making a password for Alex and navigated to group policy management to fix password requirements. 
