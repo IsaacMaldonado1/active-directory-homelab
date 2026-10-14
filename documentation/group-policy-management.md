@@ -26,7 +26,7 @@ This verified the domain's account policy configuration.
 ## drive mapping
 
 Made a new drive map for user storage. Assigned it to local drive letter E. 
-Can be found 
+Can be found [here.](../screenshots/drive-mapping1.png)
 
 
 ## Troubleshooting
