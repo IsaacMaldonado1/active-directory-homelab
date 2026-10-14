@@ -10,19 +10,17 @@ I created organizational units to keep the domain organized.
 - Computers
 - Security Groups
 
-## Test User
-I created a test user account to practice basic user administration.
+## Test User Accounts
 
-- Name: Alex Morgan
-- Username: amorgan
-- Location: Employees OU
+Created three test accounts in Active Directory to practice user administration.
+The accounts can be used to practice account maintenance and password resets.
 
-## Tasks
-- [x] Create organizational units
-- [x] Create a test user
-- [ ] Review user account properties
-- [ ] Practice resetting a user's password
-- [ ] Test account login
+- Alex Morgan
+- Sarah Chen
+- David Wilson
+
+- [View user accounts made](../screenshots/users-created.png)
+
 
 ## Notes
 Having trouble making a password for Alex and navigated to group policy management to fix password requirements. 
