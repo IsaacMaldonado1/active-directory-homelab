@@ -1,42 +1,69 @@
 # Group Policy Management
 
 ## Overview
-I used Group Policy Management to investigate domain password requirements, restrict access to desktop wallpapers, control panels, and USB devices. 
-All of the Group policies that I made can be found [here!](../screenshots/GPO-Policies-Created)
 
+Group Policy Management was used to explore centralized configuration of Windows user and computer settings in the Active Directory lab. The exercises included desktop restrictions, Control Panel access, removable-storage policy, password-policy settings, and drive mapping.
 
-## Restrictions made
+## Policies Explored
 
-Wallpapers 
-- Made a GPO called "Desktop Wallpapers" and learned how to restrict a user from changing their wallpaper.
-- Screenshot of the activity: [Wallpaper GPO.](../screenshots/GPO-Wallpaper.png)
+### Desktop Wallpaper
 
-Control Panel Access
-- Made a GPO called "Restrict control panel" and learned how to restrict a user from being able to access their control panel.
-- Screenshot of the activity: [Control Panel Access GPO.](../screenshots/GPO-control-panel.png)
+Created a GPO named **Desktop Wallpapers** to explore preventing a user from changing the desktop wallpaper.
 
-Password Policies
-- Made a GPO called "Password policies" and learned how to configure password policies.
-- Screenshot of the activity: [Password Policies GPO](../screenshots/password-policy.png)
+Evidence: [View GPO policy list](../screenshots/GPO-Policies-Created.png)
 
-## Drive Mapping
+### Control Panel Restrictions
 
-- Made a new drive map for user storage. Assigned it to local drive letter E. 
-- Screenshot of the activity: [Drive Mapping GPO](../screenshots/drive-mapping1.png)
+Created a GPO named **Restrict control panel** to explore limiting access to Control Panel.
 
-## Policy Verification
+Evidence: [View Control Panel policy screenshot](../screenshots/GPO-control-panel.png)
 
-After every policy made I refreshed Group Policy and checked the effective domain account settings.
+### Removable Storage
 
-The commands and the outputs can be found [here!](../screenshots/update-check-policies.png)
-- Command: `gpupdate /force`
-- Verification: `net accounts /domain`
-- This verified the domain's account policy configuration.
+Explored policies for restricting access to removable storage devices. Such restrictions can help reduce unauthorized data transfer when correctly scoped and tested.
 
+Evidence:
+- [View removable-storage policy](../screenshots/GPO-Restricting-Storage-Devices.png)
+- [View storage-device settings](../screenshots/GPO-Storage-Devices.png)
 
+### Password Policy
 
-## Troubleshooting
+Reviewed password policy settings after a test user password was rejected. The exercise involved checking minimum password length and complexity requirements. Password policy settings should be verified in the domain-level policy and checked against the effective domain settings.
 
-- While creating a test user account, I encountered an error and had to change the domain password requirements. 
-- Navigated to the Password Policy settings in Group Policy Management to investigate the requirements and identify a solution.
-- Created temporary password requirements [shown here](../screenshots/group-policy-password-requirements.png)
+Evidence:
+- [View password policy screenshot](../screenshots/password-policies.png)
+- [View password requirements screenshot](../screenshots/group-policy-password-requirements.png)
+
+### Drive Mapping
+
+Created a drive-mapping policy to map a user storage location to drive letter `E:`. The mapping depends on the configured target path and policy scope; verify it from a client session before claiming client-side success.
+
+Evidence: [View drive-mapping screenshot](../screenshots/drive-mapping1.png)
+
+## Policy Refresh and Verification
+
+Commands used for policy refresh and account-policy review:
+
+```cmd
+gpupdate /force
+net accounts /domain
+```
+
+- `gpupdate /force` requests a Group Policy refresh on the computer where it is run.
+- `net accounts /domain` displays domain account policy information.
+
+Evidence: [View policy refresh/check screenshot](../screenshots/update-check-policies.png)
+
+A refresh command alone does not prove that every policy applied successfully. Validate the relevant setting on the target user or computer, and inspect policy results when needed.
+
+## Troubleshooting Notes
+
+During test-account creation, a password was rejected. Group Policy Management was used to investigate password requirements. The experience reinforced the need to distinguish the policy being edited from the policy that actually governs domain users.
+
+## Best Practice
+
+- Link GPOs to the intended domain or OU.
+- Use clear names that describe the policy's purpose.
+- Keep policy scope narrow enough to avoid unintended impact.
+- Test restrictions using a non-administrative lab account.
+- Record the setting, scope, test result, and any limitations.
