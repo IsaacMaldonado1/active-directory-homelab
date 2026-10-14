@@ -9,4 +9,4 @@ I used Group Policy Management to investigate domain password requirements in my
 
 - While creating a test user account, I encountered an had to change the domain password requirements. 
 - Navigated to the Password Policy settings in Group Policy Management to investigate the requirements and identify a solution.
-- Configured the password requirements to address the issue. [View screenshot](../screenshots/group-policy-password-requirements.png)
+ - Created password requirements [shown here](../screenshots/group-policy-password-requirements.png)
