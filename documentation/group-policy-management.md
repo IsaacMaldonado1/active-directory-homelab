@@ -13,6 +13,15 @@ I used Group Policy Management to investigate domain password requirements in my
 - Password complexity: Enabled
 - [View password policies here!](../screenshots/password-policy.png)
 
+## Policy Verification
+
+Refreshed Group Policy and checked the effective domain account settings.
+
+The commands and the outputs can be found [here!](../screenshots/update-check-policies.png)
+- Command: `gpupdate /force`
+- Verification: `net accounts /domain`
+
+This verified the domain's account policy configuration.
 
 ## Troubleshooting
 
