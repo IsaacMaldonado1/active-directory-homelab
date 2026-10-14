@@ -22,6 +22,13 @@ DNS is being used to help domain-joined computers find the domain controller and
 - [ ] Verify the DNS service is running
 - [ ] Test a domain login from the Windows 11 VM
 
+## Domain Name
+This screenshot shows the domain name configured for the lab.
+![Active Directory domain name](../screenshots/active-directory-name-screenshot.png)
+
 ## Notes
-I'll add any issues I run into and how I fixed them as I continue building the lab.
+
+
+
+
 
