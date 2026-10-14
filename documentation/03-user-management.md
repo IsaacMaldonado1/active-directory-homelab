@@ -26,3 +26,5 @@ I created a test user account to practice basic user administration.
 
 ## Notes
 Having trouble making a password for Alex and navigated to group policy management to fix password requirements. 
+Navigated to /Computer Configuration/Policies/Windows Settings/Security Settings/Account Policies/Password Policy and edited the policy. 
+
